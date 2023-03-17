@@ -1,0 +1,8 @@
+<%= render "navbar" %>
+<h1><%= @list.name %></h1>
+<% @list.bookmarks.each do |bookmark| %>
+  <div class="container p-4 w-30">
+    <h2><%= bookmark.comment %></h2>
+  </div>
+<% end %>
+    <p><%= link_to "Bookmark another movie", new_list_bookmark_path(@list) %></p>

@@ -1,0 +1,10 @@
+<%= render "navbar" %>
+<h1>Lists#index</h1>
+<% @lists.each do |list| %>
+  <li>
+    <%= list.name %>
+    <%= link_to "view list", list_path(list) %>
+  </li>
+<% end %>
+<br>
+<p><%= link_to "create a new list", new_list_path %></p>
